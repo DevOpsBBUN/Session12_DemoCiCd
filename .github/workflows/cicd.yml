@@ -86,7 +86,6 @@ jobs:
         with:
           oauth-client-id: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
           oauth-secret: ${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}
-          tags: tag:ci
 
       - name: Copy deployment files to Server
         uses: appleboy/scp-action@v0.1.7
