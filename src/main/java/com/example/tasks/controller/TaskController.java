@@ -21,6 +21,7 @@ public class TaskController {
 
     @GetMapping("/api/tasks")
     public List<Task> getTasks() {
+        System.out.println("getTasks");
         return taskRepository.findAll();
     }
 }
