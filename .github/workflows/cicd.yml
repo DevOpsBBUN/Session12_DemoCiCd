@@ -80,12 +80,10 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Kết nối Tailscale VPN để có thể SSH vào home server
       - name: Connect to Tailscale
         uses: tailscale/github-action@v2
         with:
-          oauth-client-id: ${{ secrets.TAILSCALE_OAUTH_CLIENT_ID }}
-          oauth-secret: ${{ secrets.TAILSCALE_OAUTH_CLIENT_SECRET }}
+          authkey: ${{ secrets.TAILSCALE_AUTHKEY }}
 
       - name: Copy deployment files to Server
         uses: appleboy/scp-action@v0.1.7
